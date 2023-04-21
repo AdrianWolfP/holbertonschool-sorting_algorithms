@@ -28,12 +28,12 @@ void selection_sort(int *array, size_t size)
 
 	for (counterIndex = 0; counterIndex < (int)size - 1; counterIndex++)
 	{
-		for (index = min = counterIndex; Index < (int)size; index++)
+		for (index = min = counterIndex; index < (int)size; index++)
 		{
 			if (array[min] > array[index])
 				min = index;
 		}
 		if (counterIndex != min)
-			swap_array(array, size, counterIndexm min);
+			swap_array(array, size, counterIndex, min);
 	}
 }

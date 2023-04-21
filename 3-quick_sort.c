@@ -50,7 +50,7 @@ void quick_sort_r(int *array, size_t size, int *a, size_t f)
 				   (array - a) + i, (array - a) + l_index);
 		}
 	}
-	i++
+	i++;
 	swap_array(a, f, (array - a) + i, (array - a) + (size - 1));
 	if ( i > 1)
 		quick_sort_r(array, i, a, f);
