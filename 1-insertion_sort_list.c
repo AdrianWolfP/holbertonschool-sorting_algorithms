@@ -47,7 +47,7 @@ void insertion_sort_list(listint_t **list)
 	for (index = head; index;
 	     index = (sub_index ? sub_index->next : index->next))
 	{ /* loop from head to tail */
-		for (sub_index = index; sub_index = sub_index = sub_index->prev);
+		for (sub_index = index; sub_index = sub_index = sub_index->prev)
 		{
 			if (sub_index->prev && sub_index->n < sub_index->prev->n)
 				swap_list(sub_index, sub_index->prev);
