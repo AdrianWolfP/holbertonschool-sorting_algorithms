@@ -7,34 +7,21 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	size_t index, counterIndex;
+	size_t i, j;
+	int tmp;
 
-	for (counterIndex = 1; counterIndex != 0;)
+	if (array == NULL || size < 2)
+		return;
 	{
-		for (index = 0, counterIndex = 0; index < size - 1; index++)
+		for (j= 0; j < size - 1; j++)
 		{
-			if (array[index] > array[index + 1])
+			if (array[j] > array[j+ 1])
 			{
-				swap_array(array, size, index, index + 1);
-				counterIndex++;
+				tmp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = tmp;
+				print_array(array, size);
 			}
 		}
 	}
-}
-
-/**
- * swap_array - function that swaps two array elements
- * @array: Array
- * @s: Size of array
- * @a: Index of first element
- * @b: Index of second element
- */
-
-void swap_array(int *array, size_t s, int a, int b)
-{
-	int t = array[a];
-
-	array[a] = array[b];
-	array[b] = t;
-	print_array(array, s);
 }
