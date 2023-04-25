@@ -13,7 +13,7 @@ void swap_array(int *array, size_t s, int a, int b)
 
 	if (a == b)
 		return;
-	array[a] = array [b];
+	array[a] = array[b];
 	array[b] = t;
 	print_array(array, s);
 }
@@ -38,7 +38,7 @@ void quick_sort_r(int *array, size_t size, int *a, size_t f)
 			swap_array(array, size, 0, 1);
 		return;
 	}
-	pivot_value = array[ size - 1];
+	pivot_value = array[size - 1];
 
 	i = -1;
 	for (l_index = 0; l_index < (int)size - 1; l_index++)
@@ -52,8 +52,8 @@ void quick_sort_r(int *array, size_t size, int *a, size_t f)
 	}
 	i++;
 	swap_array(a, f, (array - a) + i, (array - a) + (size - 1));
-	if ( i > 1)
+	if (i > 1)
 		quick_sort_r(array, i, a, f);
-	if ( i < (int) size && i >=0)
+	if (i < (int) size && i >= 0)
 		quick_sort_r((array + i + 1), size - (i + 1), a, f);
 }
