@@ -36,7 +36,7 @@ void selection_sort(int *array, size_t size)
 				}
 			}
 		}
-		if (flag == i)
+		if (flag == 1)
 		{
 			array[temp_i] = array[i];
 			array[i] = temp;
